@@ -34,7 +34,7 @@ public class ReservaDAOImpl implements ReservaDAO {
     @Override
     public List<Reserva> listarReservasPorUsuario(int idUsuario) {
         List<Reserva> reservas = new ArrayList<>();
-        String sql = "SELECT * FROM Rq eservas WHERE id_usuario = ?";
+        String sql = "SELECT * FROM Reserva eservas WHERE idUsuario = ?";
         try (Connection conn = DataBaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, idUsuario);
